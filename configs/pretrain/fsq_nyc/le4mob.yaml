@@ -1,0 +1,69 @@
+experiment:
+  dataset: fsq_nyc
+
+data:
+  id_column: location_id
+  text_column: description
+  coordinate_columns: [longitude, latitude]
+  coordinate_order: lon-lat
+  crs: EPSG:4326
+  coordinate_units: degrees
+  validation_fraction: 0.1
+  split_seed: 101
+  max_token_length: null
+
+model:
+  text_encoder_name: sentence-transformers/all-MiniLM-L6-v2
+  text_encoder_revision: c9745ed1d9f207416be6d2e6f8de32d1f16199bf
+  initial_temperature: 0.07
+  freeze_text_encoder: true
+  normalize_projected_text: false
+  location_encoder:
+    positional_encoding: grid
+    network: fcnet
+    min_radius: 0.01
+    max_radius: 10
+    frequency_num: 32
+    hidden_dim: 256
+    output_dim: 128
+    dropout: 0.5
+    residual_layers: 4
+    compute_dtype: float64
+
+distance_regularization:
+  sample_ratio: 0.2
+  weight: 1.0
+  coordinate_system: lon-lat
+  earth_radius_m: 6371000
+
+training:
+  seed: 42
+  device: cuda:0
+  batch_size: 128
+  max_epochs: 100
+  learning_rate: 0.001
+  weight_decay: 0.01
+  num_workers: 16
+  log_every_steps: 100
+  gradient_clip_norm: null
+  early_stopping_patience: null
+
+settings:
+  conventional:
+    experiment:
+      heldout_policy: none
+    data:
+      path: data/poi/fsq_nyc/nyc_tsmc_locs.csv
+    training:
+      seed: 2025
+      max_epochs: 60
+    output:
+      directory: outputs/pretrain/fsq_nyc/conventional
+
+  inductive:
+    experiment:
+      heldout_policy: union_of_five_downstream_10pct_splits
+    data:
+      path: data/poi/fsq_nyc/nyc_tsmc_locs_remove10pct.csv
+    output:
+      directory: outputs/pretrain/fsq_nyc/inductive
