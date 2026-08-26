@@ -1,0 +1,24 @@
+{
+  "dataset": "fsq_nyc",
+  "evaluation_setting": "conventional",
+  "source_test_set": "data/next_location/fsq_nyc/fsq_nyc_7_test.pk.gz",
+  "source_test_set_sha256": "be03db83de0275b0a96c0cf69ab2ad96a138f3e7f1100d7af373ca76a3fa4a8c",
+  "source_num_samples": 12141,
+  "filter": "target_location_id != 1",
+  "target_unknown_id_excluded": 1,
+  "history_unknown_policy": "Retain a sample when location ID 1 occurs in history but the target is valid.",
+  "num_excluded_target_unknown": 1028,
+  "num_evaluated_samples": 11113,
+  "num_evaluated_samples_with_unknown_in_history": 3842,
+  "stable_identifier": "test_index is the zero-based index in source_test_set.",
+  "file": {
+    "path": "data/next_location/fsq_nyc/conventional_test_set/whole_test.csv",
+    "sha256": "66c0fbc8cedcc33812559e7ddb61e71d1479c5464cb2d7f6604983463af57d3b",
+    "num_samples": 11113
+  },
+  "source_uncompressed_sha256": "ae8f62efd81ca09ce73ea01df26ee852a994fdea03b3b9563d7583a9470bbac6",
+  "membership_columns": [
+    "test_index",
+    "target_location_id"
+  ]
+}

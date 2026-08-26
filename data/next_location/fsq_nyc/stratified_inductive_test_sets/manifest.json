@@ -1,0 +1,121 @@
+{
+  "dataset": "fsq_nyc",
+  "source_test_set": "data/next_location/fsq_nyc/fsq_nyc_7_test.pk.gz",
+  "source_test_set_sha256": "be03db83de0275b0a96c0cf69ab2ad96a138f3e7f1100d7af373ca76a3fa4a8c",
+  "target_unknown_id_excluded": 1,
+  "strata": {
+    "whole_test": "All conventional test samples with valid target IDs.",
+    "combined_inductive": "Samples with a split-held-out target or at least one split-held-out location in history."
+  },
+  "stable_identifier": "test_index is the zero-based index in source_test_set.",
+  "splits": [
+    {
+      "split_id": 0,
+      "heldout_source": "data/next_location/fsq_nyc/locs2remove_10pct_0.csv",
+      "heldout_source_sha256": "00a4e8825311aa21497989a37b8ec295f1ebe61a446dca216867c9f14f1ce4f4",
+      "num_heldout_locations": 381,
+      "legacy_inductive_source_sha256": "44bd5d9881d01e841e18d2d1e04bdcb23a45f4bb70c53e1b62d87f770cbbfafd",
+      "legacy_inductive_membership_verified": true,
+      "counts": {
+        "whole_test": 11113,
+        "combined_inductive": 5873
+      },
+      "files": {
+        "combined_inductive": {
+          "path": "data/next_location/fsq_nyc/stratified_inductive_test_sets/split_0/combined_inductive.csv",
+          "sha256": "25a65d36ed1de90d86e3dcded72df456cfb1f2e733f8cd2052b88f58dfa74704",
+          "num_samples": 5873
+        }
+      },
+      "legacy_inductive_source_removed": true
+    },
+    {
+      "split_id": 1,
+      "heldout_source": "data/next_location/fsq_nyc/locs2remove_10pct_1.csv",
+      "heldout_source_sha256": "5caa5a1c5eae2388d4e4787e6026f5931e8a537ae6d79456019c37b369c10276",
+      "num_heldout_locations": 381,
+      "legacy_inductive_source_sha256": "d9ea8dacf9c9690639b6ec1c1b3674187756bd2de386785a29b94da0537b9cab",
+      "legacy_inductive_membership_verified": true,
+      "counts": {
+        "whole_test": 11113,
+        "combined_inductive": 5344
+      },
+      "files": {
+        "combined_inductive": {
+          "path": "data/next_location/fsq_nyc/stratified_inductive_test_sets/split_1/combined_inductive.csv",
+          "sha256": "56bc23e1e326cef6e82ff0eeda2f240523cf928641172063ecfa82a5347daa7c",
+          "num_samples": 5344
+        }
+      },
+      "legacy_inductive_source_removed": true
+    },
+    {
+      "split_id": 2,
+      "heldout_source": "data/next_location/fsq_nyc/locs2remove_10pct_2.csv",
+      "heldout_source_sha256": "3c50bc84569da8c060d73742cb07628a4a6385c1d29bfbbd7c12dfcb64fcb7b0",
+      "num_heldout_locations": 381,
+      "legacy_inductive_source_sha256": "8675606109dac25ea97ec69bd6e38423adba7af551e644afd69d871a2272a461",
+      "legacy_inductive_membership_verified": true,
+      "counts": {
+        "whole_test": 11113,
+        "combined_inductive": 4459
+      },
+      "files": {
+        "combined_inductive": {
+          "path": "data/next_location/fsq_nyc/stratified_inductive_test_sets/split_2/combined_inductive.csv",
+          "sha256": "90a921eee7b4be527ff9230c5fbb10e3121e02b35149b826c22163f921219e57",
+          "num_samples": 4459
+        }
+      },
+      "legacy_inductive_source_removed": true
+    },
+    {
+      "split_id": 3,
+      "heldout_source": "data/next_location/fsq_nyc/locs2remove_10pct_3.csv",
+      "heldout_source_sha256": "900fda20bbe4d9ae48c3ed4bc5794841387aee8a9c65392409fe832a6131e3b0",
+      "num_heldout_locations": 381,
+      "legacy_inductive_source_sha256": "4800284ae8335ef91b15578df272576cbc8300ca77f77190d50eff4106a80040",
+      "legacy_inductive_membership_verified": true,
+      "counts": {
+        "whole_test": 11113,
+        "combined_inductive": 4719
+      },
+      "files": {
+        "combined_inductive": {
+          "path": "data/next_location/fsq_nyc/stratified_inductive_test_sets/split_3/combined_inductive.csv",
+          "sha256": "6ad0ccbacf8537fd5bbe599fe0e15f88259f4ca89a6656a6ecf2343b7bf75274",
+          "num_samples": 4719
+        }
+      },
+      "legacy_inductive_source_removed": true
+    },
+    {
+      "split_id": 4,
+      "heldout_source": "data/next_location/fsq_nyc/locs2remove_10pct_4.csv",
+      "heldout_source_sha256": "71b33ee763dbfdce2c0630b881a56aca8dd1439fd656bec8208d68745dfda25a",
+      "num_heldout_locations": 381,
+      "legacy_inductive_source_sha256": "bdbe469e5d5540ef0de81db49b8671898983abfab99d9e8a008e460ef323dfaa",
+      "legacy_inductive_membership_verified": true,
+      "counts": {
+        "whole_test": 11113,
+        "combined_inductive": 5071
+      },
+      "files": {
+        "combined_inductive": {
+          "path": "data/next_location/fsq_nyc/stratified_inductive_test_sets/split_4/combined_inductive.csv",
+          "sha256": "012fcaf8f66c29dc54e284e9174a77b947c85157c57a566fba92b8955932727a",
+          "num_samples": 5071
+        }
+      },
+      "legacy_inductive_source_removed": true
+    }
+  ],
+  "source_uncompressed_sha256": "ae8f62efd81ca09ce73ea01df26ee852a994fdea03b3b9563d7583a9470bbac6",
+  "membership_columns": [
+    "test_index",
+    "target_location_id"
+  ],
+  "shared_membership": {
+    "whole_test": "data/next_location/fsq_nyc/conventional_test_set/whole_test.csv"
+  }
+}
