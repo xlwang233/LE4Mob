@@ -1,0 +1,17 @@
+name: le4mob
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - numpy=1.26.4
+  - pandas=2.2.2
+  - scikit-learn=1.5
+  - pyyaml=6.0.1
+  - pytorch=2.2.2
+  - pytorch-cuda=12.1
+  - pip:
+      - transformers==4.43.4
+      - easydict==1.13
