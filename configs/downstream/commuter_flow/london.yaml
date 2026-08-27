@@ -1,0 +1,59 @@
+experiment:
+  dataset: london
+
+data:
+  root: data/commuter_flow/london
+  flow_directory: flow
+  embedding_directory: representation
+  split_ids: [0, 1, 2, 3, 4]
+  distance_column: distance_normed
+  distance_scale: 1.0
+  representations:
+    le4mob:
+      file: london_oa_embeddings_le4mob_dim128_distpres0.1.csv.gz
+      dimension: 128
+    calliper:
+      file: london_oa_embeddings_calliper_dim128.csv.gz
+      dimension: 128
+    hand_crafted:
+      file: london_oa_embeddings_hand_crafted_dim10.csv.gz
+      dimension: 10
+    lda:
+      file: london_oa_embeddings_lda_dim14.csv.gz
+      dimension: 14
+    space2vec:
+      file: london_oa_embeddings_space2vec_dim128.csv.gz
+      dimension: 128
+    sppe:
+      file: london_oa_embeddings_sppe_dim128.csv.gz
+      dimension: 128
+    urban2vec:
+      file: london_oa_embeddings_urban2vec_dim128.csv.gz
+      dimension: 128
+
+model:
+  type: deepgravity  # deepgravity or bilinear
+  hidden_dim: 128
+  num_hidden_layers: 6
+  dropout: 0.5
+  add_distance: true
+  bilinear_output_dim: 32
+
+training:
+  device: cuda:0
+  batch_size: 128
+  learning_rate: 0.001
+  max_epochs: 100
+  early_stopping_patience: 3
+  use_multiple_model_seeds: true
+  model_seeds: [10, 20, 30, 40, 50]
+
+output:
+  root: outputs/commuter_flow/london
+
+debug:
+  split_ids: [0]
+  max_train_rows: 256
+  max_validation_rows: 64
+  max_test_rows: 64
+  max_epochs: 1
