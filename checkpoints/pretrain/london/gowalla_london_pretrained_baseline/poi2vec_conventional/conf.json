@@ -1,0 +1,18 @@
+{
+    "batch_size": 32,
+    "dataset": "gowalla_london",
+    "device": "cuda:1",
+    "embed_name": "poi2vec",
+    "embed_size": 128,
+    "inductive_pct": 0,
+    "num_epoch": 10,
+    "poi2vec_indi_context": false,
+    "poi2vec_theta": 0.01,
+    "print_step": 40,
+    "save_root": "./pretrained_new",
+    "skipgram_neg": 5,
+    "source_root": "./data/",
+    "total_loc_num": 958,
+    "verbose": true,
+    "w2v_window_size": 1
+}

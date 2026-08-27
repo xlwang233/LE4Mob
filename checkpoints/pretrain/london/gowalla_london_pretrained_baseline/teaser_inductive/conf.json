@@ -1,0 +1,23 @@
+{
+    "batch_size": 32,
+    "dataset": "gowalla_london",
+    "device": "cuda:1",
+    "embed_name": "teaser",
+    "embed_size": 128,
+    "inductive_pct": 10,
+    "learning_rate": 0.001,
+    "num_epoch": 20,
+    "print_step": 40,
+    "save_root": "./pretrained_new",
+    "skipgram_neg": 5,
+    "source_root": "./data/",
+    "teaser_beta": 0.3,
+    "teaser_indi_context": false,
+    "teaser_num_ne": 5,
+    "teaser_num_nn": 10,
+    "teaser_week_embed_size": 0,
+    "total_loc_num": 958,
+    "total_user_num": 69,
+    "verbose": true,
+    "w2v_window_size": 1
+}

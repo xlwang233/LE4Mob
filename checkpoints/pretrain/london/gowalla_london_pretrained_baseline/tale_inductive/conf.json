@@ -1,0 +1,20 @@
+{
+    "batch_size": 32,
+    "dataset": "gowalla_london",
+    "device": "cuda:1",
+    "embed_name": "tale",
+    "embed_size": 128,
+    "inductive_pct": 10,
+    "learning_rate": 0.001,
+    "num_epoch": 10,
+    "print_step": 40,
+    "save_root": "./pretrained_new",
+    "skipgram_neg": 5,
+    "source_root": "./data/",
+    "tale_indi_context": true,
+    "tale_slice": 60,
+    "tale_span": 30,
+    "total_loc_num": 958,
+    "verbose": true,
+    "w2v_window_size": 1
+}

@@ -1,0 +1,17 @@
+{
+    "batch_size": 32,
+    "dataset": "gowalla_london",
+    "device": "cuda:1",
+    "embed_name": "skipgram",
+    "embed_size": 128,
+    "inductive_pct": 0,
+    "num_epoch": 10,
+    "patience": 5,
+    "print_step": 20,
+    "save_root": "./pretrained_new",
+    "skipgram_neg": 5,
+    "source_root": "./data/",
+    "total_loc_num": 958,
+    "verbose": true,
+    "w2v_window_size": 1
+}
